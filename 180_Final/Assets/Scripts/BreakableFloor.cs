@@ -8,15 +8,25 @@ using UnityEngine;
  */
 public class BreakableFloor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    /*
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.GetComponent <Player>())
+            StartCoroutine(BreakFloor());
+    }
+    */
+
+    IEnumerator BreakFloor()
+    {
+        yield return new WaitForSeconds(1f);
+        GetComponent<BoxCollider>().enabled = false;
+
+        yield return new WaitForSeconds(3f);
+        GetComponent<BoxCollider>().enabled = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
 }
