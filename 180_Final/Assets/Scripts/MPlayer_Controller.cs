@@ -6,7 +6,7 @@ public class MPlayer_Controller : MonoBehaviour
 {
     /* Mateo Jimenez
      * 12/3/2024
-     * handles player movement 
+     * handles player view control 
      */
 
     public float sensX;
@@ -21,12 +21,14 @@ public class MPlayer_Controller : MonoBehaviour
 
 
     // Start is called before the first frame update
+   
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
+    //camera will follow mouse cursor
     private void Update()
     {
 
