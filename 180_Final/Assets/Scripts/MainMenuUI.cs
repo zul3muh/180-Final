@@ -10,17 +10,14 @@ using UnityEngine.SceneManagement;
 public class MainMenuUI : MonoBehaviour
 {
 
-    public GameObject playText;
-    public GameObject quitText;
-   
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void SwitchScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
-    }
-    // Quits the game when the ui button for is clicked
-    public void Quit()
-    {
-        print("Quit Game");
-        Application.Quit();
+        print ("sceneswitched");
     }
 }
