@@ -10,9 +10,9 @@ public class BreakableFloor : MonoBehaviour
 {
     
     
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent <MPlayer_Controller>())
+        if (collision.gameObject.GetComponent<MPlayer_Movement>())
             StartCoroutine(BreakFloor());
     }
     
@@ -21,9 +21,11 @@ public class BreakableFloor : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         GetComponent<BoxCollider>().enabled = false;
+        GetComponent<MeshRenderer>().enabled = false;
 
         yield return new WaitForSeconds(3f);
         GetComponent<BoxCollider>().enabled = true;
+        GetComponent <MeshRenderer>().enabled = true;
     }
 
 
