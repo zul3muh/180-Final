@@ -8,15 +8,19 @@ using UnityEngine;
  */
 public class ArrowTrap : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed;
+    public bool travelRight;
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(travelRight == true)
+        {
+            transform.position += speed * Vector3.right * Time.deltaTime;
+        }
+        else
+        {
+            transform.position += speed * Vector3.left * Time.deltaTime;
+        }
     }
 }

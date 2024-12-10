@@ -9,13 +9,13 @@ using UnityEngine;
 public class BreakableFloor : MonoBehaviour
 {
     
-    /*
+    
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent <Player>())
+        if (collision.gameObject.GetComponent <MPlayer_Controller>())
             StartCoroutine(BreakFloor());
     }
-    */
+    
 
     IEnumerator BreakFloor()
     {
