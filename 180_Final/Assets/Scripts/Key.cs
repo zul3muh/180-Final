@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coins : MonoBehaviour
+public class Key : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private Vector3 rotation;
@@ -12,6 +12,6 @@ public class Coins : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotation * Speed * Time.deltaTime); 
+        transform.Rotate(rotation * Speed * Time.deltaTime);
     }
 }

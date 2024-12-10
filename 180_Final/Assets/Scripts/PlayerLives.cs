@@ -20,7 +20,7 @@ public class PlayerLives : MonoBehaviour
     private bool attackState = false;
 
 
-
+    //if player falls into void player will die
     void Update()
     {
         if (transform.position.y <= deathY)
@@ -29,7 +29,7 @@ public class PlayerLives : MonoBehaviour
         }
      
     }
-
+    //player picks up coins i collides with coin, or dies if collides with hazard
     private void OnCollisionEnter(Collision collision) { 
         if (collision.gameObject.GetComponent<Coins>())
         {
@@ -45,7 +45,7 @@ public class PlayerLives : MonoBehaviour
 
     
      
-    
+    //subtracts a kife from player
     public void respawn()
     {
         lives--;
