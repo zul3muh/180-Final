@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 4879771088674063918}
   - component: {fileID: 5817984188082706797}
   - component: {fileID: 5140141660053577641}
+  - component: {fileID: 7970269574802813908}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -408,6 +409,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   orientation: {fileID: 8640523005692488750}
+--- !u!114 &7970269574802813908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7883843908977525355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b48940c1960ff41a5297b7113e5826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  coinScore: 0
+  deathY: -5
+  respawnPoint: {fileID: 0}
 --- !u!1 &8732867265160541162
 GameObject:
   m_ObjectHideFlags: 0
